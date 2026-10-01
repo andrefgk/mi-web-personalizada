@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sports by Elvis Flores | Los Deportes Más Famosos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-darker text-white font-sans overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-trophy text-accent"></i> GlobalSports
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition">Inicio</a>
+                        <a href="#sports" class="hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition">Deportes</a>
+                        <a href="#stats" class="hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition">Estadísticas</a>
+                        <a href="#contact" class="bg-accent hover:bg-blue-600 px-4 py-2 rounded-full text-sm font-medium transition shadow-lg shadow-blue-500/30">Únete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-darker/70 via-darker/80 to-darker z-10"></div>
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Sports Background" class="w-full h-full object-cover hero-img" />
+        </div>
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto hero-content">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                La Pasión Que Une Al <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Mundo</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Descubre la historia, la emoción y la grandeza de los deportes más practicados y aclamados a nivel global.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#sports" class="px-8 py-4 bg-accent hover:bg-blue-600 text-white rounded-full font-bold text-lg transition transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
+                    Explorar Deportes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#video" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-full font-bold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play"></i> Ver Video
+                </a>
+            </div>
+        </div>
+        
+        <!-- Animated scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce cursor-pointer" onclick="document.getElementById('sports').scrollIntoView({behavior: 'smooth'})">
+            <div class="w-8 h-12 rounded-full border-2 border-white/50 flex justify-center pt-2">
+                <div class="w-1.5 h-3 bg-white rounded-full scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Sports Section (Swiper) -->
+    <section id="sports" class="py-24 bg-dark relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header">
+                <h2 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Los Gigantes</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white mb-4">Deportes Más Famosos</h3>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Fútbol -->
+                    <div class="swiper-slide">
+                        <div class="bg-darker rounded-2xl overflow-hidden shadow-2xl border border-white/5 group relative h-[500px]">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fútbol" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/60 to-transparent flex flex-col justify-end p-8">
+                                <div class="transform translate-y-8 group-hover:translate-y-0 transition duration-500">
+                                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4 shadow-lg shadow-blue-500/40">
+                                        <i class="fa-regular fa-futbol text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-3xl font-bold text-white mb-2">Fútbol</h4>
+                                    <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 mb-4">Con más de 3.5 mil millones de fans, es el rey indiscutible de los deportes, uniendo naciones enteras.</p>
+                                    <a href="#" class="inline-flex items-center text-accent hover:text-white font-medium opacity-0 group-hover:opacity-100 transition duration-500 delay-200">
+                                        Leer más <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Baloncesto -->
+                    <div class="swiper-slide">
+                        <div class="bg-darker rounded-2xl overflow-hidden shadow-2xl border border-white/5 group relative h-[500px]">
+                            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Baloncesto" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/60 to-transparent flex flex-col justify-end p-8">
+                                <div class="transform translate-y-8 group-hover:translate-y-0 transition duration-500">
+                                    <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-orange-500/40">
+                                        <i class="fa-solid fa-basketball text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-3xl font-bold text-white mb-2">Baloncesto</h4>
+                                    <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 mb-4">Dinámico y espectacular, cautiva a más de 2.5 mil millones de seguidores alrededor del mundo.</p>
+                                    <a href="#" class="inline-flex items-center text-orange-500 hover:text-white font-medium opacity-0 group-hover:opacity-100 transition duration-500 delay-200">
+                                        Leer más <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tenis -->
+                    <div class="swiper-slide">
+                        <div class="bg-darker rounded-2xl overflow-hidden shadow-2xl border border-white/5 group relative h-[500px]">
+                            <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tenis" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/60 to-transparent flex flex-col justify-end p-8">
+                                <div class="transform translate-y-8 group-hover:translate-y-0 transition duration-500">
+                                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-green-500/40">
+                                        <i class="fa-solid fa-baseball text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-3xl font-bold text-white mb-2">Tenis</h4>
+                                    <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 mb-4">Elegancia y resistencia individual. El deporte de raqueta más prestigioso con mil millones de fans.</p>
+                                    <a href="#" class="inline-flex items-center text-green-500 hover:text-white font-medium opacity-0 group-hover:opacity-100 transition duration-500 delay-200">
+                                        Leer más <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Críquet -->
+                    <div class="swiper-slide">
+                        <div class="bg-darker rounded-2xl overflow-hidden shadow-2xl border border-white/5 group relative h-[500px]">
+                            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Críquet" class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/60 to-transparent flex flex-col justify-end p-8">
+                                <div class="transform translate-y-8 group-hover:translate-y-0 transition duration-500">
+                                    <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-red-500/40">
+                                        <i class="fa-solid fa-gavel text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-3xl font-bold text-white mb-2">Críquet</h4>
+                                    <p class="text-gray-300 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 mb-4">Una religión en partes de Asia, Australia y el Reino Unido. Cuenta con 2.5 mil millones de devotos.</p>
+                                    <a href="#" class="inline-flex items-center text-red-500 hover:text-white font-medium opacity-0 group-hover:opacity-100 transition duration-500 delay-200">
+                                        Leer más <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination mt-10"></div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-prev !text-white after:!text-2xl w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-accent transition hidden md:flex"></div>
+                <div class="swiper-button-next !text-white after:!text-2xl w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-accent transition hidden md:flex"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-20 bg-darker border-y border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full overflow-hidden z-0 pointer-events-none opacity-20">
+            <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-600 blur-[120px]"></div>
+            <div class="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-purple-600 blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item bg-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-accent/50 transition duration-300">
+                    <i class="fa-solid fa-globe text-4xl text-accent mb-4"></i>
+                    <h4 class="text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="200">0</span>+</h4>
+                    <p class="text-gray-400">Países Participantes</p>
+                </div>
+                <div class="stat-item bg-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-accent/50 transition duration-300">
+                    <i class="fa-solid fa-users text-4xl text-purple-500 mb-4"></i>
+                    <h4 class="text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="8000">0</span>M+</h4>
+                    <p class="text-gray-400">Fans Globales</p>
+                </div>
+                <div class="stat-item bg-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-accent/50 transition duration-300">
+                    <i class="fa-solid fa-medal text-4xl text-yellow-500 mb-4"></i>
+                    <h4 class="text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="50">0</span>+</h4>
+                    <p class="text-gray-400">Deportes Olímpicos</p>
+                </div>
+                <div class="stat-item bg-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-accent/50 transition duration-300">
+                    <i class="fa-solid fa-heart-pulse text-4xl text-red-500 mb-4"></i>
+                    <h4 class="text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="100">0</span>%</h4>
+                    <p class="text-gray-400">Pura Pasión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center justify-center gap-2 mb-6">
+                <i class="fa-solid fa-trophy text-accent"></i> GlobalSports
+            </a>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Explorando la grandeza de los deportes alrededor del mundo. Únete a nuestra comunidad de fanáticos.</p>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent flex items-center justify-center text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent flex items-center justify-center text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent flex items-center justify-center text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2026 GlobalSports. Diseñado con pasión.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
